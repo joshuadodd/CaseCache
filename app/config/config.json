@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "development": {
 
     "username": "root",
@@ -25,3 +26,31 @@
     "dialect": "mysql"
   }
 }
+=======
+    "development": {
+  
+      "username": "root",
+      "password": "root",
+      "database": "passport",
+      "host": "127.0.0.1",
+      "port" : 8889,
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "root",
+      "database": "passport",
+      "host": "127.0.0.1",
+      "port" : 8889,
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": "root",
+      "database": "passport",
+      "host": "127.0.0.1",
+      "port" : 8889,
+      "dialect": "mysql"
+    }
+  }
+>>>>>>> b438ca6a5600091fde310862535f62317574d52d
