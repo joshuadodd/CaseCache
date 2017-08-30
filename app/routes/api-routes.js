@@ -16,4 +16,14 @@ module.exports = function (app, passport) {
 
 
 
+<<<<<<< HEAD
 }
+
+
+
+
+
+
+=======
+}
+>>>>>>> b438ca6a5600091fde310862535f62317574d52d
