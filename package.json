@@ -1,0 +1,31 @@
+{
+  "name": "casecache",
+  "version": "1.0.0",
+  "description": "Project #2 - Law office client portal.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuadodd/CaseCache.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuadodd/CaseCache/issues"
+  },
+  "homepage": "https://github.com/joshuadodd/CaseCache#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
+    "mysql": "^2.14.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.7.5"
+  }
+}
