@@ -1,60 +1,37 @@
 var express = require('express')
-, routes = require('./routes')
-, app = express()
-, user = require('./routes/user')
-, db = require('./models')
-, http = require('http')
-, passport = require('passport')
-, passportConfig = require('./config/passport')
-, home = require('./routes/home')
-, application = require('./routes/application')
+var app = express()
+var passport = require('passport')
+var session = require('express-session')
+var bodyParser = require('body-parser')
+var env = require('dotenv').load()
+var exphbs = require('express-handlebars')
 
-SALT_WORK_FACTOR = 12;
+//For BodyParser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.use('/public', express.static(__dirname+'/public'));
+// For Passport
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login session
 
-app.set('views', __dirname + '/views')
 
-app.set('port', process.env.PORT || 8080)
-app.use(express.urlencoded())
-app.use(express.bodyParser())
-app.use(express.cookieParser())
-app.use(express.session({ secret: 'goatjsformakebettersecurity'}))
-app.use(passport.initialize())
-app.use(passport.session())
-app.use(app.router)
 
-if ('development' === app.get('env')) {
-   app.use(express.errorHandler())
-}
+//Models
+var models = require("./app/models");
+//Routes
+require('./app/routes/api-routes.js')(app, passport);
+require('./app/routes/html-routes.js')(app, passport);
+//load passport strategies
+require('./app/config/passport/passport.js')(passport, models.user);
+//Sync Database
+models.sequelize.sync().then(function () {
+    console.log('Nice! Database looks fine')
+    app.listen(8080, function (err) {
+        if (!err)
+            console.log("Site is live"); else console.log(err)
 
-app.get('/', routes.index)
-app.get('/home', application.IsAuthenticated, home.homepage)
-app.post('/authenticate',
- passport.authenticate('local',{
-   successRedirect: '/home',
-   failureRedirect: '/'
- })
-)
-app.get('/logout', application.destroySession)
-app.get('/signup', user.signUp)
-app.post('/register', user.register)
-
-db
- .sequelize
- .sync()
- .complete(function(err){
-   if (err) {
-       throw err[0]
-   } else {
-       db.User.find({where: {username: 'admin'}}).success(function (user){
-           if (!user) {
-               db.User.build({username: 'admin', password: 'admin'}).save();
-           };
-       });
-       
-       http.createServer(app).listen(app.get('port'), function(){
-           console.log('Express is listening on port ' + app.get('port'))
-       });
-   }
-})
+    });
+}).catch(function (err) {
+    console.log(err, "Something went wrong with the Database Update!")
+});
