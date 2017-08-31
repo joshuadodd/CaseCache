@@ -16,7 +16,6 @@ module.exports = function (app, passport) {
 
 
 
-<<<<<<< HEAD
 }
 
 
@@ -24,6 +23,3 @@ module.exports = function (app, passport) {
 
 
 
-=======
-}
->>>>>>> b438ca6a5600091fde310862535f62317574d52d
