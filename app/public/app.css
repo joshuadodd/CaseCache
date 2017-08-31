@@ -11,6 +11,13 @@ body {
     background-size: cover;
 }
 
+.blok2 {
+    height: 100%;
+    background-image: url(http://www.youwall.com/papel/forest_wallpaper_8d927.jpg);
+    background-position: center bottom;
+    background-size: cover;
+}
+
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
