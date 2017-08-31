@@ -40,3 +40,19 @@ $('.tab a').on('click', function(e) {
     $(target).fadeIn(600);
 
 });
+
+$('#submit').on('click', function(e) {
+    e.preventDefault();
+    console.log('click')
+        //   var word = $('#words').val()
+    var data = {
+        firstName: $('#name').val(),
+        lastName: $('#chirpText').val()
+        email: $('#chirpText').val()
+        password: $('#chirpText').val()
+
+    };
+    console.log(data)
+    $.post('/word', data);
+    getChirps();
+});
