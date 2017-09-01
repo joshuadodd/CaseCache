@@ -13,6 +13,9 @@ module.exports = function (app, passport) {
     app.get('/signin', function (req, res) {
         res.sendFile(path.join(__dirname, "../public/signin.html"));
     });
+    app.get('/timeknot', function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/main.html"));
+    });
 
     app.get('/dashboard', isLoggedIn, function (req, res) {
         res.send('Yay!');
