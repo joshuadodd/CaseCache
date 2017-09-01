@@ -41,18 +41,22 @@ $('.tab a').on('click', function(e) {
 
 });
 
-$('#submit').on('click', function(e) {
+//$(document).ready(function() {
+
+
+$('#submitSignup').on('click', function(e) {
     e.preventDefault();
     console.log('click')
         //   var word = $('#words').val()
-    var data = {
-        firstName: $('#name').val(),
-        lastName: $('#chirpText').val()
-        email: $('#chirpText').val()
-        password: $('#chirpText').val()
+    var userData = {
+        firstName: $('#firstNameSignup').val(),
+        lastName: $('#lasttNameSignup').val(),
+        email: $('#emailSignup').val(),
+        password: $('#passwordSignup').val()
 
     };
-    console.log(data)
-    $.post('/word', data);
-    getChirps();
+    console.log(userData)
+        // $.post('/word', userData);
+        // getChirps();
 });
+//});
