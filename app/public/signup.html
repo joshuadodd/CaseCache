@@ -14,6 +14,7 @@
 
 
 </head>
+<!-- more cowbell -->
 
 <body>
     <div class="container-fluid blok1">
@@ -29,38 +30,38 @@
 
                 <div class="tab-content">
                     <div id="signup">
-                        <h1>Welcome to CaseCache</h1>
+                        <h1>Create a CaseCache account</h1>
 
                         <form>
 
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <label>
-                                      First Name<span id="firstNameSignup" class="req">*</span>
+                                      First Name<span  class="req">*</span>
                                     </label>
-                                    <input type="text" required autocomplete="off" />
+                                    <input type="text" id="firstNameSignup" required autocomplete="off" />
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
-                                      Last Name<span id="lasttNameSignup" class="req">*</span>
+                                      Last Name<span  class="req">*</span>
                                     </label>
-                                    <input type="text" required autocomplete="off" />
+                                    <input type="text" id="lasttNameSignup" required autocomplete="off" />
                                 </div>
                             </div>
 
                             <div class="field-wrap">
                                 <label>
-                                    Email<span id="emailSignup" class="req">*</span>
+                                    Email<span  class="req">*</span>
                                   </label>
-                                <input type="email" required autocomplete="off" />
+                                <input type="email" id="emailSignup" required autocomplete="off" />
                             </div>
 
                             <div class="field-wrap">
                                 <label>
-                                    Password<span id="passwordSignup" class="req">*Minimum 6 characters!</span>
+                                    Password<span  class="req">*Minimum 6 characters!</span>
                                   </label>
-                                <input type="password" required autocomplete="off" />
+                                <input type="password" id="passwordSignup" required autocomplete="off" />
                             </div>
 
                             <button type="submit" id="submitSignup" class="button button-block" />Submit</button>
@@ -70,24 +71,24 @@
                     </div>
 
                     <div id="login">
-                        <h1>Welcome Back!</h1>
+                        <h1>Welcome to CaseCache</h1>
 
                         <form>
 
                             <div class="field-wrap">
                                 <label>
-                                    Email<span id="email" class="req"></span>
+                                    Email<span  class="req"></span>
                                   </label>
-                                <input type="emailLogin" required autocomplete="off" />
+                                <input type="email" id="emailLogin" required autocomplete="off" />
 
                             </div>
                             <p class="forgot"><a href="#">Forgot Email?</a></p>
 
                             <div class="field-wrap">
                                 <label>
-                                    Password<span id="passwordLogin" class="req"></span>
+                                    Password<span  class="req"></span>
                                   </label>
-                                <input type="password" required autocomplete="off" />
+                                <input type="password" id="passwordLogin" required autocomplete="off" />
                             </div>
 
                             <p class="forgot"><a href="#">Forgot Password?</a></p>
