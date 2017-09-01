@@ -47,7 +47,6 @@ $('.tab a').on('click', function(e) {
 $('#submitSignup').on('click', function(e) {
     e.preventDefault();
     console.log('click')
-        //   var word = $('#words').val()
     var userData = {
         firstName: $('#firstNameSignup').val(),
         lastName: $('#lasttNameSignup').val(),
@@ -56,7 +55,20 @@ $('#submitSignup').on('click', function(e) {
 
     };
     console.log(userData)
-        // $.post('/word', userData);
-        // getChirps();
+    $.post('/signup', userData);
+    // getChirps();
 });
 //});
+
+$('#submitLogin').on('click', function(e) {
+    e.preventDefault();
+    console.log('click')
+    var userData = {
+        email: $('#emailLogin').val(),
+        password: $('#passwordLogin').val()
+
+    };
+    console.log(userData)
+    $.post('/signin', userData);
+    // getChirps();
+});
