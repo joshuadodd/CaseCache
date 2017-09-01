@@ -31,19 +31,19 @@
                     <div id="signup">
                         <h1>Welcome to CaseCache</h1>
 
-                        <form action="/" method="post">
+                        <form>
 
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <label>
-                                      First Name<span class="req">*</span>
+                                      First Name<span id="firstNameSignup" class="req">*</span>
                                     </label>
                                     <input type="text" required autocomplete="off" />
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
-                                      Last Name<span class="req">*</span>
+                                      Last Name<span id="lasttNameSignup" class="req">*</span>
                                     </label>
                                     <input type="text" required autocomplete="off" />
                                 </div>
@@ -51,19 +51,19 @@
 
                             <div class="field-wrap">
                                 <label>
-                                    Email<span class="req">*</span>
+                                    Email<span id="emailSignup" class="req">*</span>
                                   </label>
                                 <input type="email" required autocomplete="off" />
                             </div>
 
                             <div class="field-wrap">
                                 <label>
-                                    Password<span class="req">*Minimum 6 characters!</span>
+                                    Password<span id="passwordSignup" class="req">*Minimum 6 characters!</span>
                                   </label>
                                 <input type="password" required autocomplete="off" />
                             </div>
 
-                            <button type="submit" class="button button-block" />Submit</button>
+                            <button type="submit" id="submitSignup" class="button button-block" />Submit</button>
 
                         </form>
 
@@ -72,20 +72,20 @@
                     <div id="login">
                         <h1>Welcome Back!</h1>
 
-                        <form action="/" method="post">
+                        <form>
 
                             <div class="field-wrap">
                                 <label>
-                                    Email<span class="req"></span>
+                                    Email<span id="email" class="req"></span>
                                   </label>
-                                <input type="email" required autocomplete="off" />
+                                <input type="emailLogin" required autocomplete="off" />
 
                             </div>
                             <p class="forgot"><a href="#">Forgot Email?</a></p>
 
                             <div class="field-wrap">
                                 <label>
-                                    Password<span class="req"></span>
+                                    Password<span id="passwordLogin" class="req"></span>
                                   </label>
                                 <input type="password" required autocomplete="off" />
                             </div>
@@ -94,7 +94,7 @@
                             <p></p>
 
 
-                            <button class="button button-block" />Submit</button>
+                            <button id="submitLogin" class="button button-block" />Submit</button>
 
                         </form>
 
@@ -115,15 +115,10 @@
 </body>
 
 </html>
-
-
-
-
-
-
 </div>
 
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <script src="signin.js">
 </script>
