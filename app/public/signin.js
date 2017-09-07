@@ -48,14 +48,14 @@ $('#submitSignup').on('click', function(e) {
     e.preventDefault();
     console.log('click')
     var userData = {
-        firstName: $('#firstNameSignup').val(),
-        lastName: $('#lasttNameSignup').val(),
+        firstname: $('#firstNameSignup').val(),
+        lastname: $('#lasttNameSignup').val(),
         email: $('#emailSignup').val(),
         password: $('#passwordSignup').val()
 
     };
     console.log(userData)
-    $.post('/signup', userData);
+    $.post('/signUp', userData);
     // getChirps();
 });
 //});
@@ -69,6 +69,6 @@ $('#submitLogin').on('click', function(e) {
 
     };
     console.log(userData)
-    $.post('/signin', userData);
+    $.post('/signIn', userData);
     // getChirps();
 });
