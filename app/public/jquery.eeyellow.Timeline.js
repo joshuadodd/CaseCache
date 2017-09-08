@@ -19,8 +19,8 @@
 
     //ImportKML2D預設參數
     Timeline.options = {
-        carousel: true,
-        carouselTime: 10000
+        carousel: false,
+        carouselTime: 1000
     }
 
     //Timeline私有方法

@@ -17,8 +17,13 @@ module.exports = function(app, passport) {
         res.sendFile(path.join(__dirname, "../public/timeline.html"));
     });
 
+<<<<<<< HEAD
     // app.get('/dashboard', isLoggedIn, function (req, res) {
     //     res.send('Yay!');
+=======
+    //  app.get('/dashboard', isLoggedIn, function (req, res) {
+    //      res.send('Yay!');
+>>>>>>> 432f7bea8d1868974d8fdeac391a79cca3bbf622
     // });
 
     app.get('/logout', function(req, res) {

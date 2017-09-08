@@ -36,7 +36,6 @@ module.exports = function(passport, user) {
 
         function(req, email, password, done) {
 
-
             var generateHash = function(password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
             };
@@ -92,7 +91,7 @@ module.exports = function(passport, user) {
         },
 
         function(req, email, password, done) {
-
+            console.log("inside the local signin");
             var User = user;
 
             var isValidPassword = function(userpass, password) {
@@ -100,18 +99,23 @@ module.exports = function(passport, user) {
             }
 
             User.findOne({ where: { email: email } }).then(function(user) {
+                console.log("inside the findOne");
 
                 if (!user) {
+                    console.log("did not find user");
+
                     return done(null, false, { message: 'Email does not exist' });
                 }
 
                 if (!isValidPassword(user.password, password)) {
+                    console.log("invalid password");
 
                     return done(null, false, { message: 'Incorrect password.' });
 
                 }
 
                 var userinfo = user.get();
+                console.log("right before the done");
 
                 return done(null, userinfo);
 
