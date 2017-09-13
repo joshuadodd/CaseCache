@@ -37,21 +37,20 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Launch demo modal
+                </button>
+
+
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
+                    <li class="inactive"><a href="contact" id="contact">New Journal Entry <span class="sr-only">(current)</span></a></li>
+
+                    <li><a href="#">Link</a>
+
                     </li>
+
+
                 </ul>
                 <form class="navbar-form navbar-left">
                     <div class="form-group">
@@ -60,7 +59,7 @@
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Log Out</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -77,8 +76,29 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+
     <div class="container">
 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h1>Your CaseCache Timeline</h1>
         <div class="row">
@@ -90,11 +110,11 @@
                             <div class="circ"></div>
                             <div class="time">Feb 03</div>
                             <div class="events">
-                                <div class="events-header">Event Heading</div>
+                                <div class="events-header">Leg Xrays</div>
                                 <div class="events-body">
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/dog01.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="https://i.pinimg.com/736x/0f/d9/c4/0fd9c4957210d0c8324ccc00c39d243d--radiology-x-rays.jpg" />
                                         </div>
                                         <div class="events-desc">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -103,7 +123,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/dog02.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="https://thumbs.dreamstime.com/x/x-ray-broken-leg-20147835.jpg" />
                                         </div>
                                         <div class="events-desc">
                                             Morbi at nisi vitae mauris pretium egestas. Morbi placerat risus ligula, nec placerat urna porta vel. Nullam sollicitudin orci quis odio eleifend, ut facilisis orci lobortis. Vivamus sed lobortis odio. Nam volutpat, leo a ullamcorper luctus, sapien libero
@@ -114,7 +134,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/dog03.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="https://i2.wp.com/boneandspine.com/wp-content/uploads/2013/05/FRACTURE-PROXIMAL-PHALANX.jpg" />
                                         </div>
                                         <div class="events-desc">
                                             Cras condimentum, metus ut vehicula euismod, odio massa pulvinar neque, id gravida neque est et sem. Proin consequat id nibh quis molestie. Quisque vehicula purus id purus elementum facilisis. Phasellus sodales nibh quis neque rhoncus aliquet. Nunc eget
@@ -132,11 +152,11 @@
                             <div class="circ"></div>
                             <div class="time">Jan 21</div>
                             <div class="events">
-                                <div class="events-header">A Very Very Looooooooooooooooooooong Event Heading</div>
+                                <div class="events-header">Hand Xrays</div>
                                 <div class="events-body">
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/cat01.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="https://i.pinimg.com/736x/cd/80/23/cd80230a9c7bca78c170f3ff972820b0--radiology-x-rays.jpg" />
                                         </div>
                                         <div class="events-desc">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -145,7 +165,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/cat02.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="https://i.pinimg.com/736x/95/df/4e/95df4eaaae52efe042562a2a7a0e0b74--rad-tech-x-rays.jpg" />
                                         </div>
                                         <div class="events-desc">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -154,7 +174,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/cat03.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="http://www.mananatomy.com/wp-content/uploads/2010/12/dislocation_of_joint.jpg" />
                                         </div>
                                         <div class="events-desc">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -171,11 +191,11 @@
                             <div class="circ"></div>
                             <div class="time">Jan 07</div>
                             <div class="events">
-                                <div class="events-header">Event Heading</div>
+                                <div class="events-header">Insurance Adjuster phone call</div>
                                 <div class="events-body">
                                     <div class="row">
                                         <div class="col-md-6 pull-left">
-                                            <img class="events-object img-responsive img-rounded" src="img/rabbit01.jpeg" />
+                                            <img class="events-object img-responsive img-rounded" src="http://www.scam-detector.com/assets/car%20accident%20compensation%20claims.png" />
                                         </div>
                                         <div class="events-desc">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -195,6 +215,7 @@
             </div>
         </div>
     </div>
+
 
     <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
